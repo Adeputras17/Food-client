@@ -35,7 +35,7 @@ export default function OrderHistoryScreen() {
             dispatch({ type: 'FETCH_REQUEST' });
             try {
                 const { data } = await axios.get(
-                    `https://food-server-production.up.railway.app/api/orders/mine`,
+                    `/api/orders/mine`,
 
                     { headers: { Authorization: `Bearer ${userInfo.token}` } }
                 );

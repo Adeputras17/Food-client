@@ -23,7 +23,7 @@ export default function SigninScreen() {
     const submitHandler = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('https://food-server-production.up.railway.app/api/users/signin', {
+            const { data } = await axios.post('/api/users/signin', {
                 email,
                 password,
             });

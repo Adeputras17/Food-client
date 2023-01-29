@@ -37,7 +37,7 @@ export default function ProfileScreen() {
         e.preventDefault();
         try {
             const { data } = await axios.put(
-                'https://food-server-production.up.railway.app/api/users/profile',
+                '/api/users/profile',
                 {
                     name,
                     email,
