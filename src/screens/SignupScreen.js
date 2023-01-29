@@ -29,7 +29,7 @@ export default function SignupScreen() {
             return;
         }
         try {
-            const { data } = await Axios.post('/api/users/signup', {
+            const { data } = await Axios.post('https://food-server-production.up.railway.app/api/users/signup', {
                 name,
                 email,
                 password,

@@ -36,15 +36,15 @@ const reducer = (state, action) => {
 
 const prices = [
     {
-        name: 'Rp.1 to Rp.50',
+        name: 'Rp.1000 to Rp.25000',
         value: '1-50',
     },
     {
-        name: 'Rp.51 to Rp.200',
+        name: 'Rp.25000 to Rp.50000',
         value: '51-200',
     },
     {
-        name: 'Rp.201 to Rp.1000',
+        name: 'Rp.50000 to Rp.100000',
         value: '201-1000',
     },
 ];
@@ -92,7 +92,7 @@ export default function SearchScreen() {
         const fetchData = async () => {
             try {
                 const { data } = await axios.get(
-                    `/api/products/search?page=${page}&query=${query}&category=${category}&price=${price}&rating=${rating}&order=${order}`
+                    `https://food-server-production.up.railway.app/api/products/search?page=${page}&query=${query}&category=${category}&price=${price}&rating=${rating}&order=${order}`
                 );
                 dispatch({ type: 'FETCH_SUCCESS', payload: data });
             } catch (err) {
@@ -109,7 +109,7 @@ export default function SearchScreen() {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const { data } = await axios.get(`/api/products/categories`);
+                const { data } = await axios.get(`https://food-server-production.up.railway.app/api/products/categories`);
                 setCategories(data);
             } catch (err) {
                 toast.error(getError(err));

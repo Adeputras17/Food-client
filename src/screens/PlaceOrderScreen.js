@@ -50,7 +50,7 @@ export default function PlaceOrderScreen() {
             dispatch({ type: 'CREATE_REQUEST' });
 
             const { data } = await axios.post(
-                '/api/orders',
+                'https://food-server-production.up.railway.app/api/orders',
                 {
                     orderItems: cart.cartItems,
                     shippingAddress: cart.shippingAddress,

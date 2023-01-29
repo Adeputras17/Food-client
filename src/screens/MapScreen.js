@@ -44,7 +44,7 @@ export default function MapScreen() {
     };
     useEffect(() => {
         const fetch = async () => {
-            const { data } = await axios('/api/keys/google', {
+            const { data } = await axios('https://food-server-production.up.railway.app/api/keys/google', {
                 headers: { Authorization: `BEARER ${userInfo.token}` },
             });
             setGoogleApiKey(data.key);
