@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://food-server-production.up.railway.app/",
+  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +12,6 @@
     "axios": "^1.2.2",
     "bootstrap": "^5.2.3",
     "concurrently": "^7.6.0",
-    "dotenv": "^16.0.3",
     "dotenvi": "^0.9.1",
     "mailgun-js": "^0.22.0",
     "react": "^18.2.0",
@@ -28,7 +27,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npx http-server ./dist",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
