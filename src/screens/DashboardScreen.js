@@ -26,7 +26,6 @@ const reducer = (state, action) => {
     }
 };
 export default function DashboardScreen() {
-
     const [{ loading, summary, error }, dispatch] = useReducer(reducer, {
         loading: true,
         error: '',
@@ -89,7 +88,7 @@ export default function DashboardScreen() {
                             <Card>
                                 <Card.Body>
                                     <Card.Title>
-                                        Rp. 
+                                        $
                                         {summary.orders && summary.users[0]
                                             ? summary.orders[0].totalSales.toFixed(2)
                                             : 0}

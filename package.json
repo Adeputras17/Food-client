@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://food-server-production.up.railway.app/",
+  "proxy": "https://food-server-six.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
