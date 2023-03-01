@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "containers-us-west-24.railway.app",
+  "proxy": "https://food-server-production.up.railway.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
